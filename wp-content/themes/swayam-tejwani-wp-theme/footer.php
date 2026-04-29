@@ -35,6 +35,9 @@ if ( ! defined( 'ABSPATH' ) ) {
 		<p class="text-zinc-500 text-sm flex items-center gap-2">Designed &amp; Developed by <span class="text-blue-500 font-bold">Swayam Tejwani</span></p>
 	</div>
 </footer>
+
+
+
 <?php wp_footer(); ?>
 </body>
 </html>
