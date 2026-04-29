@@ -1,0 +1,17 @@
+.DS_Store
+Thumbs.db
+*.log
+
+# Editor files
+.vscode/
+.idea/
+
+# OS files
+desktop.ini
+
+# Backup files
+*.bak
+*.old
+*.zip
+
+static-html/
