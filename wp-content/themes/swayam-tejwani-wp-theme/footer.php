@@ -9,7 +9,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 ?>
-<footer class="bg-zinc-900 dark:bg-black w-full py-16 px-12 mt-auto footerclass">
+<footer class="bg-zinc-900 dark:bg-black w-full py-16 px-12 mt-auto">
 	<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12 max-w-[1440px] mx-auto">
 		<div class="lg:col-span-1">
 			<span class="brand-logo__text mb-6"><span class="brand-logo__name text-white">Swayam</span><span class="brand-logo__surname">Tejwani</span></span>
