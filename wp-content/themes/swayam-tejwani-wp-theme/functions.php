@@ -41,7 +41,7 @@ function st_theme_enqueue_assets() {
 
 	wp_add_inline_style(
 		'st-shared',
-		"body{font-family:'Inter',sans-serif}.text-display-lg{font-size:3.5rem;line-height:1.05;letter-spacing:-.02em;font-weight:900}.text-body-lg{font-size:1rem;line-height:1.7}.text-label-md{font-size:.875rem;letter-spacing:.1em;font-weight:600}"
+		"body{font-family:'Inter',sans-serif}.text-display-lg{font-size:3.5rem;line-height:1.05;letter-spacing:-.02em;font-weight:900}.text-body-lg{font-size:1rem;line-height:1.7}.text-label-md{font-size:.875rem;letter-spacing:.1em;font-weight:500;text-transform:uppercase}"
 	);
 
 	wp_register_script(
