@@ -304,6 +304,62 @@ function st_theme_register_submissions_admin_page() {
 add_action( 'admin_menu', 'st_theme_register_submissions_admin_page' );
 
 /**
+ * Handle submissions admin bulk actions before the admin page outputs HTML.
+ */
+function st_theme_handle_submissions_admin_actions() {
+	if (
+		! is_admin() ||
+		! current_user_can( 'manage_options' ) ||
+		! isset( $_POST['st_submissions_nonce'], $_POST['st_bulk_action'] ) ||
+		! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST['st_submissions_nonce'] ) ), 'st_submissions_bulk_action' )
+	) {
+		return;
+	}
+
+	$action = sanitize_key( wp_unslash( $_POST['st_bulk_action'] ) );
+	$ids    = isset( $_POST['submission_ids'] ) ? array_map( 'absint', (array) wp_unslash( $_POST['submission_ids'] ) ) : array();
+	$ids    = array_values( array_filter( $ids ) );
+
+	if ( 'export_all' === $action ) {
+		st_theme_export_submissions_csv();
+	}
+
+	if ( empty( $ids ) ) {
+		wp_safe_redirect(
+			add_query_arg(
+				array(
+					'page'       => 'st-theme-submissions',
+					'st_message' => 'none_selected',
+				),
+				admin_url( 'admin.php' )
+			)
+		);
+		exit;
+	}
+
+	if ( 'export_selected' === $action ) {
+		st_theme_export_submissions_csv( $ids );
+	}
+
+	if ( 'delete_selected' === $action ) {
+		$deleted = st_theme_delete_submissions( $ids );
+
+		wp_safe_redirect(
+			add_query_arg(
+				array(
+					'page'       => 'st-theme-submissions',
+					'st_message' => 'deleted',
+					'deleted'    => absint( $deleted ),
+				),
+				admin_url( 'admin.php' )
+			)
+		);
+		exit;
+	}
+}
+add_action( 'admin_init', 'st_theme_handle_submissions_admin_actions' );
+
+/**
  * Render admin submissions page.
  */
 function st_theme_render_submissions_admin_page() {
@@ -317,7 +373,6 @@ function st_theme_render_submissions_admin_page() {
 
 	$table_name  = $wpdb->prefix . ST_THEME_SUBMISSIONS_TABLE;
 	$form_filter = isset( $_GET['form_name'] ) ? sanitize_text_field( wp_unslash( $_GET['form_name'] ) ) : '';
-	$view_id     = isset( $_GET['view'] ) ? absint( $_GET['view'] ) : 0;
 	$form_names  = $wpdb->get_col( "SELECT DISTINCT form_name FROM {$table_name} ORDER BY form_name ASC" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 
 	if ( $form_filter ) {
@@ -328,10 +383,11 @@ function st_theme_render_submissions_admin_page() {
 		$submissions = $wpdb->get_results( "SELECT * FROM {$table_name} ORDER BY submitted_at DESC" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
 	}
 
-	$view_submission = $view_id ? $wpdb->get_row( $wpdb->prepare( "SELECT * FROM {$table_name} WHERE id = %d", $view_id ) ) : null;
 	?>
 	<div class="wrap">
 		<h1><?php echo esc_html__( 'Form Submissions', 'swayam-tejwani' ); ?></h1>
+
+		<?php st_theme_render_submissions_admin_notice(); ?>
 
 		<form method="get" style="margin: 1rem 0;">
 			<input type="hidden" name="page" value="st-theme-submissions"/>
@@ -345,45 +401,228 @@ function st_theme_render_submissions_admin_page() {
 			<button class="button" type="submit"><?php echo esc_html__( 'Filter', 'swayam-tejwani' ); ?></button>
 		</form>
 
-		<?php if ( $view_submission ) : ?>
-			<div class="card" style="max-width: 900px;">
-				<h2><?php echo esc_html__( 'Submission Details', 'swayam-tejwani' ); ?></h2>
-				<p><strong><?php echo esc_html__( 'Form:', 'swayam-tejwani' ); ?></strong> <?php echo esc_html( $view_submission->form_name ); ?></p>
-				<p><strong><?php echo esc_html__( 'Date:', 'swayam-tejwani' ); ?></strong> <?php echo esc_html( $view_submission->submitted_at ); ?></p>
-				<p><strong><?php echo esc_html__( 'Source URL:', 'swayam-tejwani' ); ?></strong> <a href="<?php echo esc_url( $view_submission->source_url ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $view_submission->source_url ); ?></a></p>
-				<pre style="white-space: pre-wrap;"><?php echo esc_html( wp_json_encode( json_decode( $view_submission->submitted_data, true ), JSON_PRETTY_PRINT ) ); ?></pre>
-			</div>
-		<?php endif; ?>
+		<form method="post" action="<?php echo esc_url( add_query_arg( array( 'page' => 'st-theme-submissions' ), admin_url( 'admin.php' ) ) ); ?>" id="st-submissions-form">
+			<?php wp_nonce_field( 'st_submissions_bulk_action', 'st_submissions_nonce' ); ?>
 
-		<table class="widefat striped">
-			<thead>
-				<tr>
-					<th><?php echo esc_html__( 'Form Name', 'swayam-tejwani' ); ?></th>
-					<th><?php echo esc_html__( 'Submitted Data', 'swayam-tejwani' ); ?></th>
-					<th><?php echo esc_html__( 'Date/Time', 'swayam-tejwani' ); ?></th>
-					<th><?php echo esc_html__( 'Source URL', 'swayam-tejwani' ); ?></th>
-					<th><?php echo esc_html__( 'Actions', 'swayam-tejwani' ); ?></th>
-				</tr>
-			</thead>
-			<tbody>
-				<?php if ( empty( $submissions ) ) : ?>
-					<tr><td colspan="5"><?php echo esc_html__( 'No submissions found.', 'swayam-tejwani' ); ?></td></tr>
-				<?php else : ?>
-					<?php foreach ( $submissions as $submission ) : ?>
+			<div class="tablenav top">
+				<div class="alignleft actions bulkactions">
+					<label for="st_bulk_action" class="screen-reader-text"><?php echo esc_html__( 'Select bulk action', 'swayam-tejwani' ); ?></label>
+					<select id="st_bulk_action" name="st_bulk_action">
+						<option value=""><?php echo esc_html__( 'Bulk actions', 'swayam-tejwani' ); ?></option>
+						<option value="export_selected"><?php echo esc_html__( 'Export selected', 'swayam-tejwani' ); ?></option>
+						<option value="export_all"><?php echo esc_html__( 'Export all', 'swayam-tejwani' ); ?></option>
+						<option value="delete_selected"><?php echo esc_html__( 'Delete selected', 'swayam-tejwani' ); ?></option>
+					</select>
+					<button class="button action" type="submit"><?php echo esc_html__( 'Apply', 'swayam-tejwani' ); ?></button>
+				</div>
+			</div>
+
+			<table class="widefat striped">
+				<thead>
+					<tr>
+						<td class="manage-column column-cb check-column">
+							<input id="st-select-all-submissions" type="checkbox"/>
+						</td>
+						<th><?php echo esc_html__( 'Form Name', 'swayam-tejwani' ); ?></th>
+						<th><?php echo esc_html__( 'Submitted Data', 'swayam-tejwani' ); ?></th>
+						<th><?php echo esc_html__( 'Date/Time', 'swayam-tejwani' ); ?></th>
+						<th><?php echo esc_html__( 'Source URL', 'swayam-tejwani' ); ?></th>
+						<th><?php echo esc_html__( 'Actions', 'swayam-tejwani' ); ?></th>
+					</tr>
+				</thead>
+				<tbody>
+					<?php if ( empty( $submissions ) ) : ?>
+						<tr><td colspan="6"><?php echo esc_html__( 'No submissions found.', 'swayam-tejwani' ); ?></td></tr>
+					<?php else : ?>
+						<?php foreach ( $submissions as $submission ) : ?>
+							<tr>
+								<th scope="row" class="check-column">
+									<input type="checkbox" name="submission_ids[]" value="<?php echo esc_attr( absint( $submission->id ) ); ?>"/>
+								</th>
+								<td><?php echo esc_html( $submission->form_name ); ?></td>
+								<td><?php echo esc_html( st_theme_summarize_submission_data( $submission->submitted_data ) ); ?></td>
+								<td><?php echo esc_html( $submission->submitted_at ); ?></td>
+								<td><a href="<?php echo esc_url( $submission->source_url ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $submission->source_url ); ?></a></td>
+								<td>
+									<button class="button button-small st-view-submission" type="button" data-target="st-submission-modal-<?php echo esc_attr( absint( $submission->id ) ); ?>"><?php echo esc_html__( 'View', 'swayam-tejwani' ); ?></button>
+									<a class="button button-small" href="<?php echo esc_url( wp_nonce_url( add_query_arg( array( 'page' => 'st-theme-submissions', 'delete' => absint( $submission->id ) ), admin_url( 'admin.php' ) ), 'st_delete_submission_' . absint( $submission->id ) ) ); ?>" onclick="return confirm('<?php echo esc_js( __( 'Delete this submission?', 'swayam-tejwani' ) ); ?>');"><?php echo esc_html__( 'Delete', 'swayam-tejwani' ); ?></a>
+								</td>
+							</tr>
+						<?php endforeach; ?>
+					<?php endif; ?>
+				</tbody>
+			</table>
+		</form>
+
+		<?php foreach ( $submissions as $submission ) : ?>
+			<?php st_theme_render_submission_modal( $submission ); ?>
+		<?php endforeach; ?>
+	</div>
+	<style>
+		.st-submission-modal {
+			align-items: center;
+			background: rgba(0, 0, 0, 0.35);
+			display: none;
+			inset: 0;
+			justify-content: center;
+			position: fixed;
+			z-index: 100000;
+		}
+
+		.st-submission-modal.is-open {
+			display: flex;
+		}
+
+		.st-submission-modal__panel {
+			background: #fff;
+			border-radius: 4px;
+			box-shadow: 0 18px 60px rgba(0, 0, 0, 0.25);
+			max-height: 82vh;
+			max-width: 860px;
+			overflow: auto;
+			padding: 24px;
+			width: calc(100% - 48px);
+		}
+
+		.st-submission-modal__header {
+			align-items: center;
+			display: flex;
+			gap: 16px;
+			justify-content: space-between;
+			margin-bottom: 16px;
+		}
+
+		.st-submission-modal__header h2 {
+			margin: 0;
+		}
+
+		.st-submission-modal table {
+			margin-top: 16px;
+		}
+	</style>
+	<script>
+		document.addEventListener('DOMContentLoaded', function() {
+			const form = document.getElementById('st-submissions-form');
+			const selectAll = document.getElementById('st-select-all-submissions');
+			const rowChecks = Array.from(document.querySelectorAll('input[name="submission_ids[]"]'));
+
+			if (selectAll) {
+				selectAll.addEventListener('change', function() {
+					rowChecks.forEach(function(checkbox) {
+						checkbox.checked = selectAll.checked;
+					});
+				});
+			}
+
+			if (form) {
+				form.addEventListener('submit', function(event) {
+					const action = document.getElementById('st_bulk_action').value;
+
+					if (!action) {
+						event.preventDefault();
+						return;
+					}
+
+					if ('delete_selected' === action && !window.confirm('<?php echo esc_js( __( 'Delete selected submissions?', 'swayam-tejwani' ) ); ?>')) {
+						event.preventDefault();
+					}
+				});
+			}
+
+			document.querySelectorAll('.st-view-submission').forEach(function(button) {
+				button.addEventListener('click', function() {
+					const modal = document.getElementById(button.dataset.target);
+
+					if (modal) {
+						modal.classList.add('is-open');
+						modal.querySelector('.st-submission-modal__close').focus();
+					}
+				});
+			});
+
+			document.querySelectorAll('.st-submission-modal').forEach(function(modal) {
+				modal.addEventListener('click', function(event) {
+					if (event.target === modal || event.target.classList.contains('st-submission-modal__close')) {
+						modal.classList.remove('is-open');
+					}
+				});
+			});
+
+			document.addEventListener('keydown', function(event) {
+				if ('Escape' === event.key) {
+					document.querySelectorAll('.st-submission-modal.is-open').forEach(function(modal) {
+						modal.classList.remove('is-open');
+					});
+				}
+			});
+		});
+	</script>
+	<?php
+}
+
+/**
+ * Render admin notices for submissions page actions.
+ */
+function st_theme_render_submissions_admin_notice() {
+	if ( ! isset( $_GET['st_message'] ) ) {
+		return;
+	}
+
+	$message = sanitize_key( wp_unslash( $_GET['st_message'] ) );
+
+	if ( 'none_selected' === $message ) {
+		?>
+		<div class="notice notice-warning is-dismissible">
+			<p><?php echo esc_html__( 'Please select at least one submission first.', 'swayam-tejwani' ); ?></p>
+		</div>
+		<?php
+		return;
+	}
+
+	if ( 'deleted' === $message ) {
+		$deleted = isset( $_GET['deleted'] ) ? absint( $_GET['deleted'] ) : 0;
+		?>
+		<div class="notice notice-success is-dismissible">
+			<p><?php echo esc_html( sprintf( _n( '%d submission deleted.', '%d submissions deleted.', $deleted, 'swayam-tejwani' ), $deleted ) ); ?></p>
+		</div>
+		<?php
+	}
+}
+
+/**
+ * Render a submission detail modal.
+ *
+ * @param object $submission Submission row.
+ */
+function st_theme_render_submission_modal( $submission ) {
+	$data = json_decode( $submission->submitted_data, true );
+
+	if ( ! is_array( $data ) ) {
+		$data = array();
+	}
+	?>
+	<div class="st-submission-modal" id="st-submission-modal-<?php echo esc_attr( absint( $submission->id ) ); ?>" role="dialog" aria-modal="true" aria-labelledby="st-submission-title-<?php echo esc_attr( absint( $submission->id ) ); ?>">
+		<div class="st-submission-modal__panel">
+			<div class="st-submission-modal__header">
+				<h2 id="st-submission-title-<?php echo esc_attr( absint( $submission->id ) ); ?>"><?php echo esc_html__( 'Submission Details', 'swayam-tejwani' ); ?></h2>
+				<button class="button st-submission-modal__close" type="button"><?php echo esc_html__( 'Close', 'swayam-tejwani' ); ?></button>
+			</div>
+
+			<p><strong><?php echo esc_html__( 'Form:', 'swayam-tejwani' ); ?></strong> <?php echo esc_html( $submission->form_name ); ?></p>
+			<p><strong><?php echo esc_html__( 'Date:', 'swayam-tejwani' ); ?></strong> <?php echo esc_html( $submission->submitted_at ); ?></p>
+			<p><strong><?php echo esc_html__( 'Source URL:', 'swayam-tejwani' ); ?></strong> <a href="<?php echo esc_url( $submission->source_url ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $submission->source_url ); ?></a></p>
+
+			<table class="widefat striped">
+				<tbody>
+					<?php foreach ( $data as $key => $value ) : ?>
 						<tr>
-							<td><?php echo esc_html( $submission->form_name ); ?></td>
-							<td><?php echo esc_html( st_theme_summarize_submission_data( $submission->submitted_data ) ); ?></td>
-							<td><?php echo esc_html( $submission->submitted_at ); ?></td>
-							<td><a href="<?php echo esc_url( $submission->source_url ); ?>" target="_blank" rel="noopener noreferrer"><?php echo esc_html( $submission->source_url ); ?></a></td>
-							<td>
-								<a class="button button-small" href="<?php echo esc_url( add_query_arg( array( 'page' => 'st-theme-submissions', 'view' => absint( $submission->id ) ), admin_url( 'admin.php' ) ) ); ?>"><?php echo esc_html__( 'View', 'swayam-tejwani' ); ?></a>
-								<a class="button button-small" href="<?php echo esc_url( wp_nonce_url( add_query_arg( array( 'page' => 'st-theme-submissions', 'delete' => absint( $submission->id ) ), admin_url( 'admin.php' ) ), 'st_delete_submission_' . absint( $submission->id ) ) ); ?>" onclick="return confirm('<?php echo esc_js( __( 'Delete this submission?', 'swayam-tejwani' ) ); ?>');"><?php echo esc_html__( 'Delete', 'swayam-tejwani' ); ?></a>
-							</td>
+							<th scope="row"><?php echo esc_html( st_theme_submission_field_label( $key ) ); ?></th>
+							<td><?php echo esc_html( is_array( $value ) ? implode( ', ', $value ) : $value ); ?></td>
 						</tr>
 					<?php endforeach; ?>
-				<?php endif; ?>
-			</tbody>
-		</table>
+				</tbody>
+			</table>
+		</div>
 	</div>
 	<?php
 }
@@ -409,6 +648,105 @@ function st_theme_maybe_delete_submission() {
 }
 
 /**
+ * Delete multiple submissions.
+ *
+ * @param array $ids Submission IDs.
+ * @return int
+ */
+function st_theme_delete_submissions( $ids ) {
+	global $wpdb;
+
+	$ids = array_values( array_filter( array_map( 'absint', $ids ) ) );
+
+	if ( empty( $ids ) ) {
+		return 0;
+	}
+
+	$table_name   = $wpdb->prefix . ST_THEME_SUBMISSIONS_TABLE;
+	$placeholders = implode( ', ', array_fill( 0, count( $ids ), '%d' ) );
+
+	return (int) $wpdb->query( $wpdb->prepare( "DELETE FROM {$table_name} WHERE id IN ({$placeholders})", $ids ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+}
+
+/**
+ * Export submissions to CSV.
+ *
+ * @param array $ids Optional selected submission IDs.
+ */
+function st_theme_export_submissions_csv( $ids = array() ) {
+	global $wpdb;
+
+	$table_name = $wpdb->prefix . ST_THEME_SUBMISSIONS_TABLE;
+	$ids        = array_values( array_filter( array_map( 'absint', $ids ) ) );
+
+	if ( empty( $ids ) ) {
+		$submissions = $wpdb->get_results( "SELECT * FROM {$table_name} ORDER BY submitted_at DESC" ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+	} else {
+		$placeholders = implode( ', ', array_fill( 0, count( $ids ), '%d' ) );
+		$submissions  = $wpdb->get_results( $wpdb->prepare( "SELECT * FROM {$table_name} WHERE id IN ({$placeholders}) ORDER BY submitted_at DESC", $ids ) ); // phpcs:ignore WordPress.DB.PreparedSQL.InterpolatedNotPrepared
+	}
+
+	$field_keys = array();
+	$rows       = array();
+
+	foreach ( $submissions as $submission ) {
+		$data = json_decode( $submission->submitted_data, true );
+
+		if ( ! is_array( $data ) ) {
+			$data = array();
+		}
+
+		$rows[] = array(
+			'submission' => $submission,
+			'data'       => $data,
+		);
+
+		foreach ( array_keys( $data ) as $key ) {
+			if ( ! in_array( $key, $field_keys, true ) ) {
+				$field_keys[] = $key;
+			}
+		}
+	}
+
+	$filename = 'form-submissions-' . gmdate( 'Y-m-d-His' ) . '.csv';
+
+	nocache_headers();
+	header( 'Content-Type: text/csv; charset=utf-8' );
+	header( 'Content-Disposition: attachment; filename="' . $filename . '"' );
+
+	$output = fopen( 'php://output', 'w' );
+
+	fputcsv(
+		$output,
+		array_merge(
+			array( 'ID', 'Form Name', 'Submitted At', 'Source URL' ),
+			array_map( 'st_theme_submission_field_label', $field_keys )
+		)
+	);
+
+	foreach ( $rows as $row ) {
+		$submission = $row['submission'];
+		$data       = $row['data'];
+		$csv_row    = array(
+			$submission->id,
+			$submission->form_name,
+			$submission->submitted_at,
+			$submission->source_url,
+		);
+
+		foreach ( $field_keys as $key ) {
+			$value     = isset( $data[ $key ] ) ? $data[ $key ] : '';
+			$csv_row[] = is_array( $value ) ? implode( ', ', $value ) : $value;
+		}
+
+		fputcsv( $output, $csv_row );
+	}
+
+	fclose( $output );
+	exit;
+}
+
+/**
  * Summarize JSON data.
  *
  * @param string $json Stored JSON.
@@ -424,8 +762,18 @@ function st_theme_summarize_submission_data( $json ) {
 	$summary = array();
 
 	foreach ( $data as $key => $value ) {
-		$summary[] = ucwords( str_replace( '_', ' ', $key ) ) . ': ' . ( is_array( $value ) ? implode( ', ', $value ) : $value );
+		$summary[] = st_theme_submission_field_label( $key ) . ': ' . ( is_array( $value ) ? implode( ', ', $value ) : $value );
 	}
 
 	return implode( ' | ', $summary );
+}
+
+/**
+ * Format a submitted field key as a human-readable label.
+ *
+ * @param string $key Field key.
+ * @return string
+ */
+function st_theme_submission_field_label( $key ) {
+	return ucwords( str_replace( '_', ' ', (string) $key ) );
 }
