@@ -65,15 +65,15 @@ get_header();
 </div>
 <div class="project-card group mt-12 md:mt-24">
 <div class="bg-surface-container-highest rounded-xl overflow-hidden aspect-[16/10] mb-8 transition-all duration-500 scale-100 group-hover:scale-[1.01] shadow-none">
-<img alt="Ideal Steel Buildings website homepage screenshot" class="w-full h-full object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/images/ideal-steel-buildings-homepage.png' ); ?>"/>
+<img alt="Sensation Alchemy website homepage screenshot" class="w-full h-full object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/images/sensation-alchemy-homepage.png' ); ?>"/>
 </div>
 <div class="flex flex-wrap gap-2 mb-4">
-<span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant rounded-sm">Custom WordPress</span>
-<span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant rounded-sm">WooCommerce</span>
-<span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant rounded-sm">ACF Pro</span>
+<span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant rounded-sm">WordPress</span>
+<span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant rounded-sm">OceanWP</span>
+<span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant rounded-sm">Elementor Pro</span>
 </div>
-<h3 class="text-3xl font-bold tracking-tight mb-4 group-hover:text-primary transition-colors">Ideal Steel Buildings</h3>
-<p class="text-on-surface-variant mb-6 max-w-md">SEO-focused custom WordPress website built from provided design mockups for a California steel building company. The build combines WooCommerce and ACF Pro to support flexible content management, structured product-style building data, scalable service pages, and search-friendly architecture for stronger organic visibility.</p>
+<h3 class="text-3xl font-bold tracking-tight mb-4 group-hover:text-primary transition-colors">Sensation Alchemy</h3>
+<p class="text-on-surface-variant mb-6 max-w-md">Brand-led WordPress website shaped with OceanWP and Elementor Pro, giving the client a polished way to present offerings, location details, screening information, gallery content, calendar access, and contact paths. The build keeps the visual experience expressive while preserving simple page editing for ongoing updates.</p>
 </div>
 <div class="project-card group">
 <div class="bg-surface-container-highest rounded-xl overflow-hidden aspect-[16/10] mb-8 transition-all duration-500 scale-100 group-hover:scale-[1.01] shadow-none">
