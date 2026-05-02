@@ -30,10 +30,6 @@ $pages = array(
 </head>
 <body class="bg-background text-on-background antialiased overflow-x-hidden">
 <?php wp_body_open(); ?>
-<?php
-	echo "hello swayam";
-	die;
-?>
 <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-[0px_24px_48px_rgba(26,28,30,0.06)]">
 	<div class="header-topbar">
 		<div class="flex flex-wrap justify-center md:justify-end items-center gap-x-6 gap-y-2 px-6 md:px-12 py-2 max-w-[1440px] mx-auto">
