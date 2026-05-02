@@ -31,7 +31,7 @@ $pages = array(
 <body class="bg-background text-on-background antialiased overflow-x-hidden">
 <?php wp_body_open(); ?>
 <?php
-	echo "hello";
+	echo "hello swayam";
 	die;
 ?>
 <nav class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-[0px_24px_48px_rgba(26,28,30,0.06)]">
