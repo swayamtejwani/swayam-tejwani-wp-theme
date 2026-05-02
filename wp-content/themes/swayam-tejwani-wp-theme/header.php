@@ -9,9 +9,8 @@ if ( ! defined( 'ABSPATH' ) ) {
 	exit;
 }
 
-global $st_page_title, $st_current_page;
+global $st_current_page;
 
-$st_page_title   = $st_page_title ? $st_page_title : 'Swayam Tejwani';
 $st_current_page = $st_current_page ? $st_current_page : '';
 
 $pages = array(
@@ -27,7 +26,6 @@ $pages = array(
 <head>
 	<meta charset="utf-8"/>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-	<title><?php echo esc_html( $st_page_title ); ?></title>
 	<?php wp_head(); ?>
 </head>
 <body class="bg-background text-on-background antialiased overflow-x-hidden">

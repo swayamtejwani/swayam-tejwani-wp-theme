@@ -5,7 +5,6 @@
  * @package Swayam_Tejwani
  */
 
-$st_page_title  = 'About | Swayam Tejwani';
 $st_current_page = 'about';
 
 get_header();

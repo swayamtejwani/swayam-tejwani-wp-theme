@@ -5,7 +5,6 @@
  * @package Swayam_Tejwani
  */
 
-$st_page_title  = 'Portfolio | Swayam Tejwani';
 $st_current_page = 'portfolio';
 
 get_header();

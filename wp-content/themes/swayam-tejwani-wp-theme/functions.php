@@ -13,6 +13,14 @@ define( 'ST_THEME_VERSION', '1.0.0' );
 define( 'ST_THEME_SUBMISSIONS_TABLE', 'st_theme_submissions' );
 
 /**
+ * Set up theme defaults.
+ */
+function st_theme_setup() {
+	add_theme_support( 'title-tag' );
+}
+add_action( 'after_setup_theme', 'st_theme_setup' );
+
+/**
  * Enqueue copied static assets and CDN libraries used by the original static site.
  */
 function st_theme_enqueue_assets() {
