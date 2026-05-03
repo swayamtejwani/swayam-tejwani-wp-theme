@@ -16,7 +16,23 @@ define( 'ST_THEME_SUBMISSIONS_TABLE', 'st_theme_submissions' );
  * Set up theme defaults.
  */
 function st_theme_setup() {
-	add_theme_support( 'title-tag' );
+	// Enables theme support for featured images
+    add_theme_support('post-thumbnails');
+
+    // Enables dynamic <title> tag support
+    add_theme_support('title-tag');
+
+    // Enables HTML5 markup support for better semantic output
+    add_theme_support('html5', array(
+        'search-form',
+        'comment-form',
+        'comment-list',
+        'gallery',
+        'caption',
+        'style',
+        'script'
+    ));
+
 }
 add_action( 'after_setup_theme', 'st_theme_setup' );
 
