@@ -463,6 +463,10 @@ body > nav > .nav-toggle + div {
 @media (max-width: 991px) {
   body > nav {
     min-height: 4.55rem;
+    background: #ffffff;
+    box-shadow: 0 10px 28px rgba(26, 28, 30, 0.12);
+    backdrop-filter: none;
+    -webkit-backdrop-filter: none;
   }
 
   .header-topbar {
@@ -471,6 +475,22 @@ body > nav > .nav-toggle + div {
 
   .header-desktop-nav {
     display: none !important;
+  }
+
+  .dark .brand-logo__name {
+    color: #1a1c1e;
+  }
+
+  .dark .mobile-menu-button {
+    border-color: rgba(195, 197, 217, 0.85);
+    color: #1a1c1e;
+    background: rgba(255, 255, 255, 0.9);
+  }
+
+  .dark .mobile-icon-button {
+    border-color: rgba(195, 197, 217, 0.85);
+    color: #003ec7;
+    background: rgba(221, 225, 255, 0.9);
   }
 }
 
