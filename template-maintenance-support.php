@@ -18,7 +18,7 @@ get_header();
 <p class="text-body-lg text-on-surface-variant mb-10">After launch, your website still needs attention. I provide proactive maintenance and responsive support so your team is not left troubleshooting alone.</p>
 <div class="grid grid-cols-1 sm:grid-cols-2 gap-4"><div class="rounded-2xl bg-surface-container p-5"><div class="font-black text-primary text-2xl mb-2">Updates</div><p class="text-on-surface-variant">Core, plugin, and theme updates handled carefully.</p></div><div class="rounded-2xl bg-surface-container p-5"><div class="font-black text-primary text-2xl mb-2">Monitoring</div><p class="text-on-surface-variant">Regular checks for issues before they become costly problems.</p></div></div>
 </div>
-<div class="lg:col-span-6"><img alt="WordPress theme code on a laptop with responsive device testing on a desk" class="w-full h-full object-cover rounded-[2rem] shadow-[0_24px_60px_rgba(26,28,30,0.12)] aspect-[5/4]" src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/></div>
+<div class="lg:col-span-6"><img alt="WordPress theme code on a laptop with responsive device testing on a desk" class="w-full h-full object-cover rounded-[2rem] shadow-[0_24px_60px_rgba(26,28,30,0.12)] aspect-[5/4]" src="<?php echo esc_url( get_template_directory_uri() . '/images/wordpress-responsive-testing.jpg' ); ?>"/></div>
 </div>
 </section>
 <section class="py-20 px-6 md:px-12 max-w-[1440px] mx-auto">

@@ -18,7 +18,7 @@ get_header();
 <p class="text-body-lg text-on-surface-variant mb-10">From storefront experience to checkout flow, I build WooCommerce setups that feel fast, trustworthy, and easy for customers to use.</p>
 <div class="flex flex-wrap gap-4"><span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-semibold text-sm">Storefront UX</span><span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-semibold text-sm">Checkout flow</span><span class="px-4 py-2 rounded-full bg-surface-container text-on-surface-variant font-semibold text-sm">Product architecture</span></div>
 </div>
-<div class="lg:col-span-6"><img alt="Ecommerce checkout screen with cart and online payment flow" class="w-full h-full object-cover rounded-[2rem] shadow-[0_24px_60px_rgba(26,28,30,0.12)] aspect-[5/4]" src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&amp;fit=crop&amp;w=1200&amp;q=80"/></div>
+<div class="lg:col-span-6"><img alt="Ecommerce checkout screen with cart and online payment flow" class="w-full h-full object-cover rounded-[2rem] shadow-[0_24px_60px_rgba(26,28,30,0.12)] aspect-[5/4]" src="<?php echo esc_url( get_template_directory_uri() . '/images/ecommerce-checkout-flow.jpg' ); ?>"/></div>
 </div>
 </section>
 <section class="py-20 px-6 md:px-12 max-w-[1440px] mx-auto">

@@ -65,7 +65,7 @@ get_header();
 <span class="text-label-md text-primary mb-4 block">Proven Excellence</span>
 <h2 class="text-4xl font-extrabold tracking-tighter">Why Work With Me</h2>
 </div>
-<p class="text-on-surface-variant max-w-sm">A synthesis of technical mastery and strategic insight derived from 100+ successful deployments.</p>
+<p class="text-on-surface-variant max-w-sm">A synthesis of technical mastery and strategic insight derived from 90+ successful deployments.</p>
 </div>
 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 <!-- Bento Item 1 -->
@@ -87,7 +87,7 @@ get_header();
 <!-- Bento Item 3 -->
 <div class="bg-surface-container p-10 rounded-xl">
 <div class="flex flex-col h-full">
-<div class="text-5xl font-black text-primary mb-4">100+</div>
+<div class="text-5xl font-black text-primary mb-4">90+</div>
 <h3 class="text-xl font-bold mb-2">Projects Completed</h3>
 <p class="text-on-surface-variant text-sm">Successfully delivered across fintech, healthcare, and high-growth SaaS sectors.</p>
 </div>

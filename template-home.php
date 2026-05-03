@@ -34,7 +34,7 @@ get_header();
 </div>
 <div class="lg:col-span-4 relative">
 <div class="aspect-[4/5] bg-surface-container rounded-2xl overflow-hidden relative group">
-<img alt="WordPress development code on laptop and mobile screens" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Stock photo of WordPress related web development code shown across a laptop and mobile device" src="https://images.unsplash.com/photo-1551650975-87deedd944c3?auto=format&amp;fit=crop&amp;w=900&amp;q=80"/>
+<img alt="WordPress development code on laptop and mobile screens" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Stock photo of WordPress related web development code shown across a laptop and mobile device" src="<?php echo esc_url( get_template_directory_uri() . '/images/wordpress-development-code.jpg' ); ?>"/>
 <div class="absolute bottom-6 left-6 right-6 p-6 glass-card bg-white/20 rounded-xl border border-white/30">
 <div class="flex justify-between items-end">
 <div>
