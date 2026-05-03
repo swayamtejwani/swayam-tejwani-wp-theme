@@ -115,7 +115,7 @@ get_header();
 <img class="w-full h-full object-cover rounded-lg" data-alt="clean user interface showing 100 score on google lighthouse performance metrics with vibrant green accents" src="<?php echo esc_url( get_template_directory_uri() . '/images/lighthouse-score.jpg' ); ?>"/>
 </div>
 <div class="h-64 bg-surface-variant/10 rounded-lg">
-<img class="w-full h-full object-cover rounded-lg" data-alt="close up macro shot of clean well-formatted php and css code on a high resolution screen with syntax highlighting" src="<?php echo esc_url( get_template_directory_uri() . '/images/code-snippet.jpg' ); ?>"/>
+<img class="w-full h-full object-cover rounded-lg" data-alt="modern studio workspace used for WordPress planning, support, and implementation work" src="<?php echo esc_url( get_template_directory_uri() . '/images/studio-office.jpg' ); ?>"/>
 </div>
 </div>
 <div class="space-y-4 pt-12">
