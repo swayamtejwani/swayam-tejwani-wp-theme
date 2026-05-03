@@ -24,7 +24,7 @@ get_header();
 </div>
 <div class="lg:col-span-6">
 <div class="rounded-[2rem] overflow-hidden bg-surface-container shadow-[0_24px_60px_rgba(26,28,30,0.12)]">
-<img alt="Custom WordPress development" class="w-full h-full object-cover aspect-[5/4]" src="<?php echo esc_url( get_template_directory_uri() . '/images/studio-office.jpg' ); ?>"/>
+<img alt="Custom WordPress development" class="w-full h-full object-cover aspect-[5/4]" src="<?php echo esc_url( get_template_directory_uri() . '/images/studio-office.webp' ); ?>"/>
 </div>
 </div>
 </div>
@@ -51,7 +51,7 @@ get_header();
 <section class="bg-inverse-surface text-white py-20">
 <div class="px-6 md:px-12 max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 <div class="lg:col-span-5">
-<img alt="WordPress blueprint" class="w-full h-full object-cover rounded-[1.75rem] aspect-[4/5]" src="<?php echo esc_url( get_template_directory_uri() . '/images/architecture-blueprint.jpg' ); ?>"/>
+<img alt="WordPress blueprint" class="w-full h-full object-cover rounded-[1.75rem] aspect-[4/5]" src="<?php echo esc_url( get_template_directory_uri() . '/images/architecture-blueprint.webp' ); ?>"/>
 </div>
 <div class="lg:col-span-7">
 <span class="text-label-md text-blue-300 uppercase mb-4 block">What&apos;s Included</span>

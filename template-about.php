@@ -31,7 +31,7 @@ get_header();
 <div class="max-w-[1440px] mx-auto px-12 grid grid-cols-1 lg:grid-cols-12 gap-16">
 <div class="lg:col-span-5 relative">
 <div class="aspect-[4/5] bg-surface-container-highest rounded-xl overflow-hidden shadow-2xl group">
-<img alt="Swayam Tejwani" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Portrait of Swayam Tejwani in a light blue shirt" src="<?php echo esc_url( get_template_directory_uri() . '/images/swayam-tejwani.png' ); ?>"/>
+<img alt="Swayam Tejwani" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Portrait of Swayam Tejwani in a light blue shirt" src="<?php echo esc_url( get_template_directory_uri() . '/images/swayam-tejwani.webp' ); ?>"/>
 </div>
 <div class="absolute -bottom-8 -right-8 bg-primary p-8 rounded-xl text-on-primary hidden md:block">
 <div class="text-4xl font-black">12+</div>
@@ -112,18 +112,18 @@ get_header();
 <div class="grid grid-cols-2 gap-4">
 <div class="space-y-4">
 <div class="h-48 bg-surface-variant/10 rounded-lg">
-<img class="w-full h-full object-cover rounded-lg" data-alt="clean user interface showing 100 score on google lighthouse performance metrics with vibrant green accents" src="<?php echo esc_url( get_template_directory_uri() . '/images/lighthouse-score.jpg' ); ?>"/>
+<img class="w-full h-full object-cover rounded-lg" data-alt="clean user interface showing 100 score on google lighthouse performance metrics with vibrant green accents" src="<?php echo esc_url( get_template_directory_uri() . '/images/lighthouse-score.webp' ); ?>"/>
 </div>
 <div class="h-64 bg-surface-variant/10 rounded-lg">
-<img class="w-full h-full object-cover rounded-lg" data-alt="modern studio workspace used for WordPress planning, support, and implementation work" src="<?php echo esc_url( get_template_directory_uri() . '/images/studio-office.jpg' ); ?>"/>
+<img class="w-full h-full object-cover rounded-lg" data-alt="modern studio workspace used for WordPress planning, support, and implementation work" src="<?php echo esc_url( get_template_directory_uri() . '/images/studio-office.webp' ); ?>"/>
 </div>
 </div>
 <div class="space-y-4 pt-12">
 <div class="h-64 bg-surface-variant/10 rounded-lg">
-<img class="w-full h-full object-cover rounded-lg" data-alt="three high end smartphones displaying a responsive wordpress website design with fluid typography and elegant layouts" src="<?php echo esc_url( get_template_directory_uri() . '/images/responsive-design.jpg' ); ?>"/>
+<img class="w-full h-full object-cover rounded-lg" data-alt="three high end smartphones displaying a responsive wordpress website design with fluid typography and elegant layouts" src="<?php echo esc_url( get_template_directory_uri() . '/images/responsive-design.webp' ); ?>"/>
 </div>
 <div class="h-48 bg-surface-variant/10 rounded-lg">
-<img class="w-full h-full object-cover rounded-lg" data-alt="architectural blueprint overlay on a digital wireframe representing technical website structure and hierarchy" src="<?php echo esc_url( get_template_directory_uri() . '/images/architecture-blueprint.jpg' ); ?>"/>
+<img class="w-full h-full object-cover rounded-lg" data-alt="architectural blueprint overlay on a digital wireframe representing technical website structure and hierarchy" src="<?php echo esc_url( get_template_directory_uri() . '/images/architecture-blueprint.webp' ); ?>"/>
 </div>
 </div>
 </div>

@@ -21,7 +21,7 @@ get_header();
 <div class="rounded-2xl bg-surface-container p-5"><div class="font-black text-primary text-2xl mb-2">UX Cleanup</div><p class="text-on-surface-variant">Sharper hierarchy, cleaner pages, and improved mobile flow.</p></div>
 </div>
 </div>
-<div class="lg:col-span-6"><img alt="Theme customization" class="w-full h-full object-cover rounded-[2rem] shadow-[0_24px_60px_rgba(26,28,30,0.12)] aspect-[5/4]" src="<?php echo esc_url( get_template_directory_uri() . '/images/responsive-design.jpg' ); ?>"/></div>
+<div class="lg:col-span-6"><img alt="Theme customization" class="w-full h-full object-cover rounded-[2rem] shadow-[0_24px_60px_rgba(26,28,30,0.12)] aspect-[5/4]" src="<?php echo esc_url( get_template_directory_uri() . '/images/responsive-design.webp' ); ?>"/></div>
 </div>
 </section>
 <section class="py-20 px-6 md:px-12 max-w-[1440px] mx-auto">
@@ -49,7 +49,7 @@ get_header();
 </section>
 <section class="bg-surface-container-low py-20">
 <div class="px-6 md:px-12 max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
-<div class="lg:col-span-5"><img alt="Refined WordPress interface" class="rounded-[1.75rem] w-full h-full object-cover aspect-[4/5]" src="<?php echo esc_url( get_template_directory_uri() . '/images/project-global-media.jpg' ); ?>"/></div>
+<div class="lg:col-span-5"><img alt="Refined WordPress interface" class="rounded-[1.75rem] w-full h-full object-cover aspect-[4/5]" src="<?php echo esc_url( get_template_directory_uri() . '/images/project-global-media.webp' ); ?>"/></div>
 <div class="lg:col-span-7">
 <span class="text-label-md text-primary uppercase mb-4 block">Typical Outcomes</span>
 <h2 class="text-4xl font-black mb-8">A site that feels more custom, more cohesive, and easier to trust.</h2>

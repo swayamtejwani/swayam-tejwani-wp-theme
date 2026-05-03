@@ -34,7 +34,7 @@ get_header();
 </div>
 <div class="lg:col-span-4 relative">
 <div class="aspect-[4/5] bg-surface-container rounded-2xl overflow-hidden relative group">
-<img alt="WordPress development code on laptop and mobile screens" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Stock photo of WordPress related web development code shown across a laptop and mobile device" src="<?php echo esc_url( get_template_directory_uri() . '/images/wordpress-development-code.jpg' ); ?>"/>
+<img alt="WordPress development code on laptop and mobile screens" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Stock photo of WordPress related web development code shown across a laptop and mobile device" src="<?php echo esc_url( get_template_directory_uri() . '/images/wordpress-development-code.webp' ); ?>"/>
 <div class="absolute bottom-6 left-6 right-6 p-6 glass-card bg-white/20 rounded-xl border border-white/30">
 <div class="flex justify-between items-end">
 <div>
@@ -188,7 +188,7 @@ get_header();
 <!-- Project 1 -->
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 <div class="lg:col-span-7 bg-surface-container-high rounded-2xl overflow-hidden aspect-video">
-<img alt="Quantra website homepage screenshot" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Screenshot of the Quantra quartz products website homepage" src="<?php echo esc_url( get_template_directory_uri() . '/images/quantra-homepage.png' ); ?>"/>
+<img alt="Quantra website homepage screenshot" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Screenshot of the Quantra quartz products website homepage" src="<?php echo esc_url( get_template_directory_uri() . '/images/quantra-homepage.webp' ); ?>"/>
 </div>
 <div class="lg:col-span-5 px-4">
 <div class="flex gap-2 mb-6">
@@ -216,7 +216,7 @@ get_header();
                     </p>
 </div>
 <div class="lg:col-span-7 lg:order-2 order-1 bg-surface-container-high rounded-2xl overflow-hidden aspect-video">
-<img alt="Gresham's Chop House website homepage screenshot" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Screenshot of the Gresham's Chop House restaurant website homepage" src="<?php echo esc_url( get_template_directory_uri() . '/images/greshams-chophouse-homepage.png' ); ?>"/>
+<img alt="Gresham's Chop House website homepage screenshot" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Screenshot of the Gresham's Chop House restaurant website homepage" src="<?php echo esc_url( get_template_directory_uri() . '/images/greshams-chophouse-homepage.webp' ); ?>"/>
 </div>
 </div>
 </div>
@@ -237,7 +237,7 @@ get_header();
 <div class="testimonial-track">
 <article class="testimonial-slide">
 <div class="testimonial-card">
-<img alt="Arlene Dyrvik" class="testimonial-photo" src="<?php echo esc_url( get_template_directory_uri() . '/images/arlene-dyrvik.jpg' ); ?>"/>
+<img alt="Arlene Dyrvik" class="testimonial-photo" src="<?php echo esc_url( get_template_directory_uri() . '/images/arlene-dyrvik.webp' ); ?>"/>
 <div>
 <p class="testimonial-quote">Few people are as dependable and reliable as Swayam. He always came through when I needed project help fast. He also, of course, is an excellent coder and managed to create whatever it was that my clients dreamed up. All this and never a complaint or a sour word. Pleasure to work with.</p>
 <h3 class="testimonial-name">Arlene Dyrvik</h3>
@@ -247,7 +247,7 @@ get_header();
 </article>
 <article class="testimonial-slide">
 <div class="testimonial-card">
-<img alt="Amanda Calderon" class="testimonial-photo" src="<?php echo esc_url( get_template_directory_uri() . '/images/amanda-calderon.jpg' ); ?>"/>
+<img alt="Amanda Calderon" class="testimonial-photo" src="<?php echo esc_url( get_template_directory_uri() . '/images/amanda-calderon.webp' ); ?>"/>
 <div>
 <p class="testimonial-quote">I've worked with Swayam multiple times, and he consistently deliver outstanding results. Every project we've collaborated on has been handled with professionalism, attention to detail, and a strong commitment to quality. I highly recommend him to anyone looking for dependable, top-quality WordPress development work.</p>
 <h3 class="testimonial-name">Amanda Calderon</h3>
@@ -257,7 +257,7 @@ get_header();
 </article>
 <article class="testimonial-slide">
 <div class="testimonial-card">
-<img alt="Mary-Ellen McAllister" class="testimonial-photo" src="<?php echo esc_url( get_template_directory_uri() . '/images/mary-ellen-mcallister.jpg' ); ?>"/>
+<img alt="Mary-Ellen McAllister" class="testimonial-photo" src="<?php echo esc_url( get_template_directory_uri() . '/images/mary-ellen-mcallister.webp' ); ?>"/>
 <div>
 <p class="testimonial-quote">Swayam was an integral part of my web design business, he could quickly and accurately perform the necessary tasks to get my websites up and running and performing beautifully. If there was a situation that needed special attention, he always had the answers. He is a very efficient coder. He was a great asset for me.</p>
 <h3 class="testimonial-name">Mary-Ellen McAllister</h3>
@@ -267,7 +267,7 @@ get_header();
 </article>
 <article class="testimonial-slide">
 <div class="testimonial-card">
-<img alt="Sury Maturi" class="testimonial-photo" src="<?php echo esc_url( get_template_directory_uri() . '/images/sury-maturi.jpg' ); ?>"/>
+<img alt="Sury Maturi" class="testimonial-photo" src="<?php echo esc_url( get_template_directory_uri() . '/images/sury-maturi.webp' ); ?>"/>
 <div>
 <p class="testimonial-quote">Swayam is a truly professional and knowledgeable. Listened to my needs and made it happen. Swayam was on top of the work and exceeded my expectations. Highly recommend him.</p>
 <h3 class="testimonial-name">Sury Maturi</h3>

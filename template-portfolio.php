@@ -28,7 +28,7 @@ get_header();
 <div class="grid grid-cols-1 md:grid-cols-2 gap-12" id="portfolio-grid">
 <div class="project-card group">
 <div class="bg-surface-container-highest rounded-xl overflow-hidden aspect-[16/10] mb-8 transition-all duration-500 scale-100 group-hover:scale-[1.01] shadow-none">
-<img alt="Quantra website homepage screenshot" class="w-full h-full object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/images/quantra-homepage.png' ); ?>"/>
+<img alt="Quantra website homepage screenshot" class="w-full h-full object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/images/quantra-homepage.webp' ); ?>"/>
 </div>
 <div class="flex flex-wrap gap-2 mb-4">
 <span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant rounded-sm">WordPress</span>
@@ -40,7 +40,7 @@ get_header();
 </div>
 <div class="project-card group mt-12 md:mt-24">
 <div class="bg-surface-container-highest rounded-xl overflow-hidden aspect-[16/10] mb-8 transition-all duration-500 scale-100 group-hover:scale-[1.01] shadow-none">
-<img alt="Gresham's Chop House website homepage screenshot" class="w-full h-full object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/images/greshams-chophouse-homepage.png' ); ?>"/>
+<img alt="Gresham's Chop House website homepage screenshot" class="w-full h-full object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/images/greshams-chophouse-homepage.webp' ); ?>"/>
 </div>
 <div class="flex flex-wrap gap-2 mb-4">
 <span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant rounded-sm">WordPress</span>
@@ -53,7 +53,7 @@ get_header();
 </div>
 <div class="project-card group">
 <div class="bg-surface-container-highest rounded-xl overflow-hidden aspect-[16/10] mb-8 transition-all duration-500 scale-100 group-hover:scale-[1.01] shadow-none">
-<img alt="Lilac Services website homepage screenshot" class="w-full h-full object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/images/lilac-services-homepage.png' ); ?>"/>
+<img alt="Lilac Services website homepage screenshot" class="w-full h-full object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/images/lilac-services-homepage.webp' ); ?>"/>
 </div>
 <div class="flex flex-wrap gap-2 mb-4">
 <span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant rounded-sm">WordPress</span>
@@ -65,7 +65,7 @@ get_header();
 </div>
 <div class="project-card group mt-12 md:mt-24">
 <div class="bg-surface-container-highest rounded-xl overflow-hidden aspect-[16/10] mb-8 transition-all duration-500 scale-100 group-hover:scale-[1.01] shadow-none">
-<img alt="Sensation Alchemy website homepage screenshot" class="w-full h-full object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/images/sensation-alchemy-homepage.png' ); ?>"/>
+<img alt="Sensation Alchemy website homepage screenshot" class="w-full h-full object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/images/sensation-alchemy-homepage.webp' ); ?>"/>
 </div>
 <div class="flex flex-wrap gap-2 mb-4">
 <span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant rounded-sm">WordPress</span>
@@ -77,7 +77,7 @@ get_header();
 </div>
 <div class="project-card group">
 <div class="bg-surface-container-highest rounded-xl overflow-hidden aspect-[16/10] mb-8 transition-all duration-500 scale-100 group-hover:scale-[1.01] shadow-none">
-<img alt="IAAFL website homepage screenshot" class="w-full h-full object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/images/iaafl-homepage.png' ); ?>"/>
+<img alt="IAAFL website homepage screenshot" class="w-full h-full object-cover" src="<?php echo esc_url( get_template_directory_uri() . '/images/iaafl-homepage.webp' ); ?>"/>
 </div>
 <div class="flex flex-wrap gap-2 mb-4">
 <span class="bg-surface-container-high px-3 py-1 text-[10px] uppercase tracking-widest font-bold text-on-surface-variant rounded-sm">WordPress</span>
