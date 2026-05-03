@@ -26,6 +26,7 @@ $pages = array(
 <head>
 	<meta charset="utf-8"/>
 	<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+	<meta name="google-site-verification" content="E0-yWEEEYcWD-U_ytjnL4pCkWILtbWAamKEcKgHugTU" />
 	<?php wp_head(); ?>
 </head>
 <body class="bg-background text-on-background antialiased overflow-x-hidden">
