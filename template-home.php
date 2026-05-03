@@ -43,7 +43,7 @@ get_header();
 </div>
 <div class="text-right">
 <p class="text-white text-label-md uppercase opacity-80">Projects</p>
-<p class="text-white font-black text-2xl">100+</p>
+<p class="text-white font-black text-2xl">90+</p>
 </div>
 </div>
 </div>
