@@ -79,12 +79,10 @@ function st_theme_enqueue_assets() {
 	wp_add_inline_script( 'st-tailwind', st_theme_tailwind_config(), 'before' );
 	wp_enqueue_script( 'st-tailwind' );
 
-	wp_enqueue_script( 'jquery' );
-
 	wp_enqueue_script(
 		'st-quote-popup',
 		$theme_uri . '/js/quote-popup.js',
-		array( 'jquery' ),
+		array(),
 		ST_THEME_VERSION,
 		true
 	);
@@ -126,6 +124,47 @@ function st_theme_enqueue_assets() {
 	);
 }
 add_action( 'wp_enqueue_scripts', 'st_theme_enqueue_assets' );
+
+/**
+ * Reduce render-blocking assets on the front end.
+ *
+ * @param string $tag    Generated script tag.
+ * @param string $handle Script handle.
+ * @return string
+ */
+function st_theme_defer_scripts( $tag, $handle ) {
+	if ( 'st-tailwind' !== $handle ) {
+		return $tag;
+	}
+
+	return str_replace( ' src=', ' defer src=', $tag );
+}
+add_filter( 'script_loader_tag', 'st_theme_defer_scripts', 10, 2 );
+
+/**
+ * Load non-critical theme CSS without blocking first paint.
+ *
+ * @param string $html   Generated stylesheet tag.
+ * @param string $handle Style handle.
+ * @param string $href   Stylesheet URL.
+ * @param string $media  Stylesheet media.
+ * @return string
+ */
+function st_theme_preload_noncritical_styles( $html, $handle, $href, $media ) {
+	if ( 'st-shared' !== $handle ) {
+		return $html;
+	}
+
+	$media_attr = $media ? $media : 'all';
+
+	return sprintf(
+		'<link rel="preload" href="%1$s" as="style" onload="this.onload=null;this.rel=\'stylesheet\'" media="%2$s"><noscript>%3$s</noscript>',
+		esc_url( $href ),
+		esc_attr( $media_attr ),
+		$html
+	);
+}
+add_filter( 'style_loader_tag', 'st_theme_preload_noncritical_styles', 10, 4 );
 
 /**
  * Tailwind runtime config copied from the static pages.

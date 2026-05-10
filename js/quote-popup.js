@@ -1,10 +1,18 @@
-(function ($) {
+(function () {
+  function $(selector, context) {
+    return (context || document).querySelector(selector);
+  }
+
+  function $all(selector, context) {
+    return Array.from((context || document).querySelectorAll(selector));
+  }
+
   function buildQuoteModal() {
-    if ($('#quote-modal').length) {
+    if ($('#quote-modal')) {
       return;
     }
 
-    $('body').append(`
+    document.body.insertAdjacentHTML('beforeend', `
       <div class="quote-modal" id="quote-modal" aria-hidden="true">
         <div class="quote-modal__overlay" data-quote-close></div>
         <div class="quote-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="quote-modal-title">
@@ -48,79 +56,109 @@
 
   function openQuoteModal() {
     buildQuoteModal();
-    $('#quote-modal').addClass('is-open').attr('aria-hidden', 'false');
-    $('body').addClass('quote-modal-open');
+    $('#quote-modal').classList.add('is-open');
+    $('#quote-modal').setAttribute('aria-hidden', 'false');
+    document.body.classList.add('quote-modal-open');
     setTimeout(function () {
-      $('#quote-name').trigger('focus');
+      $('#quote-name').focus();
     }, 80);
   }
 
   function closeQuoteModal() {
-    $('#quote-modal').removeClass('is-open').attr('aria-hidden', 'true');
-    $('body').removeClass('quote-modal-open');
+    var modal = $('#quote-modal');
+
+    if (!modal) {
+      return;
+    }
+
+    modal.classList.remove('is-open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('quote-modal-open');
   }
 
   function setError(name, message) {
-    $('[data-error-for="' + name + '"]').text(message);
+    $('[data-error-for="' + name + '"]').textContent = message;
   }
 
   function clearErrors() {
-    $('.quote-form__error, .quote-form__status').text('');
-    $('.quote-form__field').removeClass('quote-form__field--invalid');
+    $all('.quote-form__error, .quote-form__status').forEach(function (field) {
+      field.textContent = '';
+    });
+    $all('.quote-form__field').forEach(function (field) {
+      field.classList.remove('quote-form__field--invalid');
+    });
   }
 
   function isValidEmail(email) {
     return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
   }
 
-  $(function () {
-    $(document).on('click', '.quote-popup-trigger', function (event) {
+  document.addEventListener('DOMContentLoaded', function () {
+    document.addEventListener('click', function (event) {
+      var trigger = event.target.closest('.quote-popup-trigger');
+
+      if (!trigger) {
+        return;
+      }
+
       event.preventDefault();
       openQuoteModal();
     });
 
-    $(document).on('click', '[data-quote-close]', closeQuoteModal);
-
-    $(document).on('keydown', function (event) {
-      if (event.key === 'Escape' && $('#quote-modal').hasClass('is-open')) {
+    document.addEventListener('click', function (event) {
+      if (event.target.closest('[data-quote-close]')) {
         closeQuoteModal();
       }
     });
 
-    $(document).on('submit', '.quote-form', function (event) {
+    document.addEventListener('keydown', function (event) {
+      var modal = $('#quote-modal');
+
+      if (event.key === 'Escape' && modal && modal.classList.contains('is-open')) {
+        closeQuoteModal();
+      }
+    });
+
+    document.addEventListener('submit', function (event) {
+      var form = event.target.closest('.quote-form');
+
+      if (!form) {
+        return;
+      }
+
       event.preventDefault();
       clearErrors();
 
-      var name = $.trim($('#quote-name').val());
-      var email = $.trim($('#quote-email').val());
-      var message = $.trim($('#quote-message').val());
+      var name = $('#quote-name').value.trim();
+      var email = $('#quote-email').value.trim();
+      var message = $('#quote-message').value.trim();
       var valid = true;
 
       if (!name) {
         setError('name', 'Please enter your name.');
-        $('#quote-name').addClass('quote-form__field--invalid');
+        $('#quote-name').classList.add('quote-form__field--invalid');
         valid = false;
       }
 
       if (!email || !isValidEmail(email)) {
         setError('email', 'Please enter a valid email address.');
-        $('#quote-email').addClass('quote-form__field--invalid');
+        $('#quote-email').classList.add('quote-form__field--invalid');
         valid = false;
       }
 
       if (!message) {
         setError('message', 'Please tell me a little about your project.');
-        $('#quote-message').addClass('quote-form__field--invalid');
+        $('#quote-message').classList.add('quote-form__field--invalid');
         valid = false;
       }
 
       if (!valid) {
-        $('.quote-form__field--invalid').first().trigger('focus');
+        $('.quote-form__field--invalid').focus();
         return;
       }
 
-      $('.quote-form__status').text('Thanks. Your inquiry is ready to send.');
-      this.reset();
+      $('.quote-form__status').textContent = 'Thanks. Your inquiry is ready to send.';
+      form.reset();
     });
   });
-})(jQuery);
+})();
