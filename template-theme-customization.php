@@ -39,10 +39,10 @@ get_header();
 <div class="service-story-card p-8 bg-inverse-surface text-white border-0">
 <span class="material-symbols-outlined text-blue-300 !text-5xl mb-6">auto_fix_high</span>
 <h2 class="text-3xl font-black mb-4">Why teams choose this service</h2>
-<p class="text-zinc-300 text-body-lg mb-6">It is the fastest path to elevating an existing site when the foundation is usable but the design feels generic, inconsistent, or underperforming.</p>
+<p class="space-y-4 text-on-surface-variant text-body-lg">It is the fastest path to elevating an existing site when the foundation is usable but the design feels generic, inconsistent, or underperforming.</p>
 <div class="grid grid-cols-2 gap-4">
-<div class="rounded-2xl bg-white/5 p-5"><div class="text-3xl font-black mb-2">Faster</div><p class="text-zinc-300">Than a full rebuild when timelines are tight.</p></div>
-<div class="rounded-2xl bg-white/5 p-5"><div class="text-3xl font-black mb-2">Safer</div><p class="text-zinc-300">Because the existing setup stays familiar to your team.</p></div>
+<div class="rounded-2xl bg-white/5 p-5"><div class="text-3xl font-black mb-2">Faster</div><p class="space-y-4 text-on-surface-variant text-body-lg">Than a full rebuild when timelines are tight.</p></div>
+<div class="rounded-2xl bg-white/5 p-5"><div class="text-3xl font-black mb-2">Safer</div><p class="space-y-4 text-on-surface-variant text-body-lg">Because the existing setup stays familiar to your team.</p></div>
 </div>
 </div>
 </div>
