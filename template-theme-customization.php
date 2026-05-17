@@ -36,7 +36,7 @@ get_header();
 <li>Responsive refinements so the design behaves properly on every screen.</li>
 </ul>
 </div>
-<div class="service-story-card p-8 bg-inverse-surface text-white border-0">
+<div class="service-story-card p-8 bg-inverse-surface border-0">
 <span class="material-symbols-outlined text-blue-300 !text-5xl mb-6">auto_fix_high</span>
 <h2 class="text-3xl font-black mb-4">Why teams choose this service</h2>
 <p class="space-y-4 text-on-surface-variant text-body-lg">It is the fastest path to elevating an existing site when the foundation is usable but the design feels generic, inconsistent, or underperforming.</p>
