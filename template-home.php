@@ -23,7 +23,7 @@ get_header();
                     I help digital agencies deliver WordPress projects, solve complex technical problems, and handle ongoing client work without expanding their full-time development team.
                 </p>
 
-<div class="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-600">
+<div class="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-600 mb-6">
   <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-50 px-3 py-1.5 ring-1 ring-slate-200">
     <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
     13+ Years Experience
