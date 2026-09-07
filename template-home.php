@@ -19,16 +19,25 @@ get_header();
 <span class="text-primary">WordPress Solutions</span> <br/>
                     Built to Scale.
                 </h1>
-<p class="text-body-lg text-on-surface-variant max-w-xl mb-12">
+<p class="text-body-lg text-on-surface-variant max-w-xl mb-4">
                     I help digital agencies deliver WordPress projects, solve complex technical problems, and handle ongoing client work without expanding their full-time development team.
                 </p>
 
-<div class="flex items-center gap-2 text-xs text-gray-400">
-  <span>13+ Years Experience</span>
-  <span aria-hidden="true">·</span>
-  <span>White-Label Friendly</span>
-  <span aria-hidden="true">·</span>
-  <span>Project &amp; Ongoing Support</span>
+<div class="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-600">
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-50 px-3 py-1.5 ring-1 ring-slate-200">
+    <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+    13+ Years Experience
+  </span>
+
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-50 px-3 py-1.5 ring-1 ring-slate-200">
+    <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+    White-Label Friendly
+  </span>
+
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-50 px-3 py-1.5 ring-1 ring-slate-200">
+    <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+    Project &amp; Ongoing Support
+  </span>
 </div>
 <div class="flex flex-wrap gap-6">
 <a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-lg font-bold hover:scale-102 transition-all flex items-center gap-2" href="#contact">
