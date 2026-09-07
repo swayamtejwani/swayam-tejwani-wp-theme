@@ -20,7 +20,7 @@ get_header();
                     Built to Scale.
                 </h1>
 <p class="text-body-lg text-on-surface-variant max-w-xl mb-12">
-                    12+ years of engineering custom WordPress ecosystems that prioritize speed, security, and editorial flexibility. I bridge the gap between complex code and intuitive user experiences.
+                    I help digital agencies deliver WordPress projects, solve complex technical problems, and handle ongoing client work without expanding their full-time development team.
                 </p>
 <div class="flex flex-wrap gap-6">
 <a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-lg font-bold hover:scale-102 transition-all flex items-center gap-2" href="#contact">
