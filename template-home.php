@@ -22,9 +22,17 @@ get_header();
 <p class="text-body-lg text-on-surface-variant max-w-xl mb-12">
                     I help digital agencies deliver WordPress projects, solve complex technical problems, and handle ongoing client work without expanding their full-time development team.
                 </p>
+
+<div class="flex items-center gap-2 text-xs text-gray-400">
+  <span>13+ Years Experience</span>
+  <span aria-hidden="true">·</span>
+  <span>White-Label Friendly</span>
+  <span aria-hidden="true">·</span>
+  <span>Project &amp; Ongoing Support</span>
+</div>
 <div class="flex flex-wrap gap-6">
 <a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-lg font-bold hover:scale-102 transition-all flex items-center gap-2" href="#contact">
-                        Start Your Project
+                        Discuss a Project
                         <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
 </a>
 <a class="border border-primary/40 text-primary px-8 py-4 rounded-lg font-bold hover:bg-primary-fixed/30 transition-all" href="<?php echo esc_url( home_url( '/portfolio/' ) ); ?>">
