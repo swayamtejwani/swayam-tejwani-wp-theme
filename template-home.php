@@ -191,8 +191,8 @@ get_header();
 <section class="py-24 px-12 max-w-[1440px] mx-auto" id="portfolio">
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
 <div class="max-w-2xl">
-<span class="text-label-md text-primary uppercase mb-4 block">Selected Work</span>
-<h2 class="text-5xl font-black text-on-surface">Architectural Excellence in Every Pixel.</h2>
+<!-- <span class="text-label-md text-primary uppercase mb-4 block">Selected Work</span> -->
+<h2 class="text-5xl font-black text-on-surface">Selected WordPress Work</h2>
 </div>
 <a class="group flex items-center gap-2 text-label-md text-on-surface font-bold" href="<?php echo esc_url( home_url( '/portfolio/' ) ); ?>">
                 View All Projects
