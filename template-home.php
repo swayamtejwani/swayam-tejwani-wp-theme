@@ -13,7 +13,7 @@ get_header();
 <section class="pt-44 pb-20 px-12 max-w-[1440px] mx-auto min-h-screen flex flex-col justify-center">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 <div class="lg:col-span-8">
-<span class="text-label-md text-primary uppercase mb-6 block test2">Swayam Tejwani &mdash; Senior WordPress Architect</span>
+<span class="text-label-md text-primary uppercase mb-6 block test2">SWAYAM TEJWANI — WORDPRESS DEVELOPMENT PARTNER</span>
 <h1 class="text-display-lg text-on-surface mb-8">
                     Reliable WordPress <br/>
 <span class="text-primary">Development Support</span> <br/>
