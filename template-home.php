@@ -135,9 +135,9 @@ get_header();
 </div>
 <div class="lg:col-span-7 space-y-8">
 <p class="text-2xl font-light text-on-surface-variant leading-relaxed">
-                    For 13+ years, I've worked across the WordPress stack — building new websites, customizing existing platforms, troubleshooting production issues, improving performance, and supporting ongoing client projects.
+                    For 13+ years, I've worked across the WordPress stack — building new websites, customizing existing platforms, troubleshooting production issues, improving performance, and supporting ongoing client projects.For 13+ years, I've worked across the WordPress stack, building new websites, customizing existing platforms, troubleshooting production issues, improving performance, and supporting ongoing client projects.
                 </p>
-<p class="text-body-lg text-on-surface-variant">I'm comfortable joining an existing codebase and working alongside designers, project managers, developers, and agency teams — including white-label engagements where I work entirely behind the scenes.</p>
+<p class="text-body-lg text-on-surface-variant">I'm comfortable working with existing codebases and collaborating with designers, project managers, developers, and agency teams. I'm also happy to work as a white-label development partner, completely behind the scenes when required.</p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
 <div class="p-8 bg-surface-container-highest rounded-xl">
 <h4 class="text-label-md text-primary uppercase mb-4">The Methodology</h4>
