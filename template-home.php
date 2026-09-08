@@ -74,7 +74,7 @@ get_header();
 <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
 <div>
 <span class="text-label-md text-primary uppercase mb-3 block">Proven WordPress Delivery</span>
-<h2 class="text-4xl md:text-5xl font-black text-on-surface leading-tight">Built, optimized, and supported at scale.</h2>
+<h2 class="text-4xl md:text-5xl font-black text-on-surface leading-tight">WordPress Experience That Goes Beyond Building Websites.</h2>
 </div>
 <p class="text-body-lg text-on-surface-variant max-w-xl">Real-world WordPress experience across custom builds, WooCommerce stores, performance tuning, and ongoing support.</p>
 </div>
