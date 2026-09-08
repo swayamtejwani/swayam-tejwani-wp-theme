@@ -91,12 +91,12 @@ get_header();
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="groups">groups</span>
-<h3 class="stats-card__value"><span class="stat-counter" data-count="19" data-suffix="+">0</span></h3>
+<h3 class="stats-card__value"><span class="stat-counter" data-count="10" data-suffix="+">0</span></h3>
 <p class="stats-card__label">Clients Worked With</p>
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="speed">speed</span>
-<h3 class="stats-card__value"><span class="stat-counter" data-count="80" data-suffix="+">0</span></h3>
+<h3 class="stats-card__value"><span class="stat-counter" data-count="8" data-suffix="+">0</span></h3>
 <p class="stats-card__label">Websites Optimized</p>
 </div>
 <div class="stats-card">
