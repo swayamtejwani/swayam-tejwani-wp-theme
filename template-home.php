@@ -181,7 +181,7 @@ get_header();
 <div class="service-card group p-8 rounded-xl">
 <span class="service-card__icon material-symbols-outlined text-red-300 !text-5xl mb-8 block" data-icon="shield">shield</span>
 <h3 class="service-card__title text-xl font-bold text-white mb-4">Maintenance &amp; Performance</h3>
-<p class="service-card__copy text-zinc-400 text-body-lg mb-8">Updates, ongoing development, performance optimization, security, monitoring and technical support.</p>
+<p class="service-card__copy text-zinc-400 text-body-lg mb-8">Keep your website secure, updated, and running smoothly with ongoing WordPress maintenance and support.</p>
 <a class="service-card__link" href="<?php echo esc_url( home_url( '/maintenance-support/' ) ); ?>">Learn More <span class="service-card__link-arrow"><span class="material-symbols-outlined !text-lg" data-icon="arrow_forward">arrow_forward</span></span></a>
 </div>
 </div>
