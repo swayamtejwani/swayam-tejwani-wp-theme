@@ -56,11 +56,11 @@ get_header();
 <div class="flex justify-between items-end">
 <div>
 <p class="text-white text-label-md uppercase opacity-80">Experience</p>
-<p class="text-white font-black text-2xl">12+ Years</p>
+<p class="text-white font-black text-2xl">13+ Years</p>
 </div>
 <div class="text-right">
 <p class="text-white text-label-md uppercase opacity-80">Projects</p>
-<p class="text-white font-black text-2xl">90+</p>
+<p class="text-white font-black text-2xl">34+</p>
 </div>
 </div>
 </div>
@@ -91,7 +91,7 @@ get_header();
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="groups">groups</span>
-<h3 class="stats-card__value"><span class="stat-counter" data-count="50" data-suffix="+">0</span></h3>
+<h3 class="stats-card__value"><span class="stat-counter" data-count="19" data-suffix="+">0</span></h3>
 <p class="stats-card__label">Clients Worked With</p>
 </div>
 <div class="stats-card">
