@@ -20,7 +20,7 @@ get_header();
                     for Digital Agencies
                 </h1>
 <p class="text-body-lg text-on-surface-variant max-w-xl mb-4">
-                    I help digital agencies deliver WordPress projects, solve complex technical problems, and handle ongoing client work without expanding their full-time development team.
+                    I help digital agencies deliver WordPress projects, solve complex technical problems, and handle ongoing WordPress work without expanding their full-time development team.
                 </p>
 
 <div class="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-600 mb-6">
@@ -45,7 +45,7 @@ get_header();
                         <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
 </a>
 <a class="border border-primary/40 text-primary px-8 py-4 rounded-lg font-bold hover:bg-primary-fixed/30 transition-all" href="<?php echo esc_url( home_url( '/portfolio/' ) ); ?>">
-                        View Portfolio
+                        View Selected Work
                     </a>
 </div>
 </div>
