@@ -15,9 +15,9 @@ get_header();
 <div class="lg:col-span-8">
 <span class="text-label-md text-primary uppercase mb-6 block test2">Swayam Tejwani &mdash; Senior WordPress Architect</span>
 <h1 class="text-display-lg text-on-surface mb-8">
-                    High-Performance <br/>
-<span class="text-primary">WordPress Solutions</span> <br/>
-                    Built to Scale.
+                    Reliable WordPress <br/>
+<span class="text-primary">Development Support</span> <br/>
+                    for Digital Agencies
                 </h1>
 <p class="text-body-lg text-on-surface-variant max-w-xl mb-4">
                     I help digital agencies deliver WordPress projects, solve complex technical problems, and handle ongoing client work without expanding their full-time development team.
