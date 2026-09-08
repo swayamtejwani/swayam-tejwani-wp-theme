@@ -118,20 +118,20 @@ get_header();
 <div class="about-sticky-panel lg:col-span-5">
 <span class="text-label-md text-primary uppercase mb-4 block">The Architect</span>
 <h2 class="text-4xl font-black mb-8 leading-tight">Engineering Digital <br/> Foundations since 2012.</h2>
-<div class="space-y-4">
-<div class="flex items-center gap-4 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
-<p class="text-body-lg">Certified WordPress Expert</p>
-</div>
-<div class="flex items-center gap-4 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary" data-icon="code">code</span>
-<p class="text-body-lg">Full-Stack Capability (PHP, React, SQL)</p>
-</div>
-<div class="flex items-center gap-4 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary" data-icon="speed">speed</span>
-<p class="text-body-lg">Core Web Vitals Specialist</p>
-</div>
-</div>
+<!-- <div class="space-y-4">
+  <div class="flex items-center gap-4 text-on-surface-variant">
+    <span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+    <p class="text-body-lg">Certified WordPress Expert</p>
+  </div>
+  <div class="flex items-center gap-4 text-on-surface-variant">
+    <span class="material-symbols-outlined text-primary" data-icon="code">code</span>
+    <p class="text-body-lg">Full-Stack Capability (PHP, React, SQL)</p>
+  </div>
+  <div class="flex items-center gap-4 text-on-surface-variant">
+    <span class="material-symbols-outlined text-primary" data-icon="speed">speed</span>
+    <p class="text-body-lg">Core Web Vitals Specialist</p>
+  </div>
+</div> -->
 </div>
 <div class="lg:col-span-7 space-y-8">
 <p class="text-2xl font-light text-on-surface-variant leading-relaxed">
