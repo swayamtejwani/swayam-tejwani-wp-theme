@@ -315,8 +315,8 @@ get_header();
 <section class="final-cta bg-surface" id="contact">
 <div class="max-w-4xl mx-auto px-6 md:px-12 text-center">
 <span class="text-label-md text-primary uppercase mb-5 block">Start a Project</span>
-<h2 class="text-display-lg text-on-surface mb-8">Ready to build something remarkable?</h2>
-<p class="text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Let&apos;s create a WordPress experience that looks refined, performs fast, and gives your business room to grow.</p>
+<h2 class="text-display-lg text-on-surface mb-8">Need an Extra Pair of Experienced WordPress Hands?</h2>
+<p class="text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Whether you have an upcoming build, an overloaded development team, a difficult WordPress issue, or ongoing client work that needs reliable support, let's talk.</p>
 <div class="flex flex-col sm:flex-row gap-4 justify-center">
 <a class="quote-popup-trigger primary-gradient text-on-primary px-10 py-4 rounded-lg font-bold text-lg hover:scale-105 hover:shadow-2xl transition-all inline-flex items-center justify-center gap-2" href="#quote"><span class="material-symbols-outlined" data-icon="request_quote">request_quote</span><span>Get a Quote</span></a>
 <a class="border-2 border-primary/40 text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-fixed transition-all inline-flex items-center justify-center gap-2" href="tel:+919893174406"><span class="material-symbols-outlined" data-icon="call">call</span><span>Call Now</span></a>
