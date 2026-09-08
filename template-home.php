@@ -135,11 +135,9 @@ get_header();
 </div>
 <div class="lg:col-span-7 space-y-8">
 <p class="text-2xl font-light text-on-surface-variant leading-relaxed">
-                    I don't just build websites; I engineer scalable digital products. My approach combines clean backend architecture with practical WordPress workflows that make websites easier to manage and grow.
+                    For 13+ years, I've worked across the WordPress stack — building new websites, customizing existing platforms, troubleshooting production issues, improving performance, and supporting ongoing client projects.
                 </p>
-<p class="text-body-lg text-on-surface-variant">
-                    Throughout my 12-year journey, I've worked with everything from fast-growing startups to enterprise-level publishing houses. I specialize in turning bloated, slow-moving WordPress installations into lightning-fast, secure, and SEO-optimized powerhouses.
-                </p>
+<p class="text-body-lg text-on-surface-variant">I'm comfortable joining an existing codebase and working alongside designers, project managers, developers, and agency teams — including white-label engagements where I work entirely behind the scenes.</p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
 <div class="p-8 bg-surface-container-highest rounded-xl">
 <h4 class="text-label-md text-primary uppercase mb-4">The Methodology</h4>
