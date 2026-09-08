@@ -313,7 +313,7 @@ get_header();
 </section>
 <!-- Final CTA -->
 <section class="final-cta bg-surface" id="contact">
-<div class="max-w-4xl mx-auto px-6 md:px-12 text-center">
+<div class="max-w-6xl mx-auto px-6 md:px-12 text-center">
 <span class="text-label-md text-primary uppercase mb-5 block">Start a Project</span>
 <h2 class="text-display-lg text-on-surface mb-8">Need an Extra Pair of Experienced WordPress Hands?</h2>
 <p class="text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Whether you have an upcoming build, an overloaded development team, a difficult WordPress issue, or ongoing client work that needs reliable support, let's talk.</p>
