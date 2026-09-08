@@ -81,7 +81,7 @@ get_header();
 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="task_alt">task_alt</span>
-<h3 class="stats-card__value"><span class="stat-counter" data-count="90" data-suffix="+">0</span></h3>
+<h3 class="stats-card__value"><span class="stat-counter" data-count="40" data-suffix="+">0</span></h3>
 <p class="stats-card__label">Projects Completed</p>
 </div>
 <div class="stats-card">
@@ -91,12 +91,12 @@ get_header();
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="groups">groups</span>
-<h3 class="stats-card__value"><span class="stat-counter" data-count="10" data-suffix="+">0</span></h3>
+<h3 class="stats-card__value"><span class="stat-counter" data-count="20" data-suffix="+">0</span></h3>
 <p class="stats-card__label">Clients Worked With</p>
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="speed">speed</span>
-<h3 class="stats-card__value"><span class="stat-counter" data-count="8" data-suffix="+">0</span></h3>
+<h3 class="stats-card__value"><span class="stat-counter" data-count="10" data-suffix="+">0</span></h3>
 <p class="stats-card__label">Websites Optimized</p>
 </div>
 <div class="stats-card">
