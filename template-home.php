@@ -76,12 +76,12 @@ get_header();
 <span class="text-label-md text-primary uppercase mb-3 block">Proven WordPress Delivery</span>
 <h2 class="text-4xl md:text-5xl font-black text-on-surface leading-tight">13+ Years of WordPress. <br>Real-World Results.</h2>
 </div>
-<p class="text-body-lg text-on-surface-variant max-w-xl">Real-world WordPress experience across custom builds, WooCommerce stores, performance tuning, and ongoing support.</p>
+<p class="text-body-lg text-on-surface-variant max-w-xl">Real-world WordPress experience across custom builds, WooCommerce stores, performance optimization, troubleshooting, and ongoing support.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="task_alt">task_alt</span>
-<h3 class="stats-card__value"><span class="stat-counter" data-count="40" data-suffix="+">0</span></h3>
+<h3 class="stats-card__value"><span class="stat-counter" data-count="60" data-suffix="+">0</span></h3>
 <p class="stats-card__label">Projects Completed</p>
 </div>
 <div class="stats-card">
@@ -91,23 +91,23 @@ get_header();
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="groups">groups</span>
-<h3 class="stats-card__value"><span class="stat-counter" data-count="20" data-suffix="+">0</span></h3>
-<p class="stats-card__label">Clients Worked With</p>
+<h3 class="stats-card__value"><span class="stat-counter" data-count="100" data-suffix="%">0</span></h3>
+<p class="stats-card__label">White-Label Friendly</p>
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="speed">speed</span>
-<h3 class="stats-card__value"><span class="stat-counter" data-count="10" data-suffix="+">0</span></h3>
+<h3 class="stats-card__value"><span class="stat-counter" data-count="20" data-suffix="+">0</span></h3>
 <p class="stats-card__label">Websites Optimized</p>
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="query_stats">query_stats</span>
 <h3 class="stats-card__value"><span class="stat-counter" data-count="90" data-suffix="+">0</span></h3>
-<p class="stats-card__label">Avg. PageSpeed Score</p>
+<p class="stats-card__label">PageSpeed Scores Achieved</p>
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="support_agent">support_agent</span>
 <h3 class="stats-card__value"><span class="stat-counter" data-count="24" data-prefix="&lt;" data-suffix="h">0</span></h3>
-<p class="stats-card__label">Support Response Time</p>
+<p class="stats-card__label">Typical Response Time</p>
 </div>
 </div>
 </div>
