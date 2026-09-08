@@ -13,14 +13,14 @@ get_header();
 <section class="pt-44 pb-20 px-12 max-w-[1440px] mx-auto min-h-screen flex flex-col justify-center">
 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
 <div class="lg:col-span-8">
-<span class="text-label-md text-primary uppercase mb-6 block test2">Swayam Tejwani &mdash; Senior WordPress Architect</span>
+<span class="text-label-md text-primary uppercase mb-6 block test2">SWAYAM TEJWANI — WORDPRESS DEVELOPMENT PARTNER</span>
 <h1 class="text-display-lg text-on-surface mb-8">
-                    High-Performance <br/>
-<span class="text-primary">WordPress Solutions</span> <br/>
-                    Built to Scale.
+                    Reliable WordPress <br/>
+<span class="text-primary">Development Support</span> <br/>
+                    for Digital Agencies
                 </h1>
 <p class="text-body-lg text-on-surface-variant max-w-xl mb-4">
-                    I help digital agencies deliver WordPress projects, solve complex technical problems, and handle ongoing client work without expanding their full-time development team.
+                    I help digital agencies deliver WordPress projects, solve complex technical problems, and handle ongoing WordPress work without expanding their full-time development team.
                 </p>
 
 <div class="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-600 mb-6">
@@ -45,7 +45,7 @@ get_header();
                         <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
 </a>
 <a class="border border-primary/40 text-primary px-8 py-4 rounded-lg font-bold hover:bg-primary-fixed/30 transition-all" href="<?php echo esc_url( home_url( '/portfolio/' ) ); ?>">
-                        View Portfolio
+                        View Selected Work
                     </a>
 </div>
 </div>
@@ -56,11 +56,11 @@ get_header();
 <div class="flex justify-between items-end">
 <div>
 <p class="text-white text-label-md uppercase opacity-80">Experience</p>
-<p class="text-white font-black text-2xl">12+ Years</p>
+<p class="text-white font-black text-2xl">13+ Years</p>
 </div>
 <div class="text-right">
 <p class="text-white text-label-md uppercase opacity-80">Projects</p>
-<p class="text-white font-black text-2xl">90+</p>
+<p class="text-white font-black text-2xl">60+</p>
 </div>
 </div>
 </div>
@@ -74,40 +74,40 @@ get_header();
 <div class="flex flex-col lg:flex-row lg:items-end lg:justify-between gap-6 mb-10">
 <div>
 <span class="text-label-md text-primary uppercase mb-3 block">Proven WordPress Delivery</span>
-<h2 class="text-4xl md:text-5xl font-black text-on-surface leading-tight">Built, optimized, and supported at scale.</h2>
+<h2 class="text-4xl md:text-5xl font-black text-on-surface leading-tight">13+ Years of WordPress. <br>Real-World Results.</h2>
 </div>
-<p class="text-body-lg text-on-surface-variant max-w-xl">Real-world WordPress experience across custom builds, WooCommerce stores, performance tuning, and ongoing support.</p>
+<p class="text-body-lg text-on-surface-variant max-w-xl">Real-world WordPress experience across custom builds, WooCommerce stores, performance optimization, troubleshooting, and ongoing support.</p>
 </div>
 <div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-3 gap-5">
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="task_alt">task_alt</span>
-<h3 class="stats-card__value"><span class="stat-counter" data-count="90" data-suffix="+">0</span></h3>
+<h3 class="stats-card__value"><span class="stat-counter" data-count="60" data-suffix="+">0</span></h3>
 <p class="stats-card__label">Projects Completed</p>
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="workspace_premium">workspace_premium</span>
-<h3 class="stats-card__value"><span class="stat-counter" data-count="12" data-suffix="+">0</span></h3>
+<h3 class="stats-card__value"><span class="stat-counter" data-count="13" data-suffix="+">0</span></h3>
 <p class="stats-card__label">Years of Experience</p>
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="groups">groups</span>
-<h3 class="stats-card__value"><span class="stat-counter" data-count="50" data-suffix="+">0</span></h3>
-<p class="stats-card__label">Clients Worked With</p>
+<h3 class="stats-card__value"><span class="stat-counter" data-count="100" data-suffix="%">0</span></h3>
+<p class="stats-card__label">White-Label Friendly</p>
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="speed">speed</span>
-<h3 class="stats-card__value"><span class="stat-counter" data-count="80" data-suffix="+">0</span></h3>
+<h3 class="stats-card__value"><span class="stat-counter" data-count="20" data-suffix="+">0</span></h3>
 <p class="stats-card__label">Websites Optimized</p>
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="query_stats">query_stats</span>
 <h3 class="stats-card__value"><span class="stat-counter" data-count="90" data-suffix="+">0</span></h3>
-<p class="stats-card__label">Avg. PageSpeed Score</p>
+<p class="stats-card__label">PageSpeed Scores Achieved</p>
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="support_agent">support_agent</span>
 <h3 class="stats-card__value"><span class="stat-counter" data-count="24" data-prefix="&lt;" data-suffix="h">0</span></h3>
-<p class="stats-card__label">Support Response Time</p>
+<p class="stats-card__label">Typical Response Time</p>
 </div>
 </div>
 </div>
@@ -118,28 +118,26 @@ get_header();
 <div class="about-sticky-panel lg:col-span-5">
 <span class="text-label-md text-primary uppercase mb-4 block">The Architect</span>
 <h2 class="text-4xl font-black mb-8 leading-tight">Engineering Digital <br/> Foundations since 2012.</h2>
-<div class="space-y-4">
-<div class="flex items-center gap-4 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
-<p class="text-body-lg">Certified WordPress Expert</p>
-</div>
-<div class="flex items-center gap-4 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary" data-icon="code">code</span>
-<p class="text-body-lg">Full-Stack Capability (PHP, React, SQL)</p>
-</div>
-<div class="flex items-center gap-4 text-on-surface-variant">
-<span class="material-symbols-outlined text-primary" data-icon="speed">speed</span>
-<p class="text-body-lg">Core Web Vitals Specialist</p>
-</div>
-</div>
+<!-- <div class="space-y-4">
+  <div class="flex items-center gap-4 text-on-surface-variant">
+    <span class="material-symbols-outlined text-primary" data-icon="verified">verified</span>
+    <p class="text-body-lg">Certified WordPress Expert</p>
+  </div>
+  <div class="flex items-center gap-4 text-on-surface-variant">
+    <span class="material-symbols-outlined text-primary" data-icon="code">code</span>
+    <p class="text-body-lg">Full-Stack Capability (PHP, React, SQL)</p>
+  </div>
+  <div class="flex items-center gap-4 text-on-surface-variant">
+    <span class="material-symbols-outlined text-primary" data-icon="speed">speed</span>
+    <p class="text-body-lg">Core Web Vitals Specialist</p>
+  </div>
+</div> -->
 </div>
 <div class="lg:col-span-7 space-y-8">
 <p class="text-2xl font-light text-on-surface-variant leading-relaxed">
-                    I don't just build websites; I engineer scalable digital products. My approach combines clean backend architecture with practical WordPress workflows that make websites easier to manage and grow.
+                    For 13+ years, I've worked across the WordPress stack, building new websites, customizing existing platforms, troubleshooting production issues, improving performance, and supporting ongoing client projects.
                 </p>
-<p class="text-body-lg text-on-surface-variant">
-                    Throughout my 12-year journey, I've worked with everything from fast-growing startups to enterprise-level publishing houses. I specialize in turning bloated, slow-moving WordPress installations into lightning-fast, secure, and SEO-optimized powerhouses.
-                </p>
+<p class="text-body-lg text-on-surface-variant">I'm comfortable working with existing codebases and collaborating with designers, project managers, developers, and agency teams. I'm also happy to work as a white-label development partner, completely behind the scenes when required.</p>
 <div class="grid grid-cols-1 md:grid-cols-2 gap-8 pt-8">
 <div class="p-8 bg-surface-container-highest rounded-xl">
 <h4 class="text-label-md text-primary uppercase mb-4">The Methodology</h4>
@@ -165,24 +163,24 @@ get_header();
 <div class="service-card group p-8 rounded-xl">
 <span class="service-card__icon material-symbols-outlined text-blue-400 !text-5xl mb-8 block" data-icon="code_blocks">code_blocks</span>
 <h3 class="service-card__title text-xl font-bold text-white mb-4">Custom WordPress Development</h3>
-<p class="service-card__copy text-zinc-400 text-body-lg mb-8">Get a fully custom WordPress website designed for your business goals, fast, responsive, and built to perform.</p>
+<p class="service-card__copy text-zinc-400 text-body-lg mb-8">Custom themes, ACF, existing website development, custom functionality and WordPress enhancements.</p>
 <a class="service-card__link" href="<?php echo esc_url( home_url( '/custom-wordpress-development/' ) ); ?>">Learn More <span class="service-card__link-arrow"><span class="material-symbols-outlined !text-lg" data-icon="arrow_forward">arrow_forward</span></span></a>
 </div>
 <div class="service-card group p-8 rounded-xl">
-<span class="service-card__icon material-symbols-outlined text-emerald-300 !text-5xl mb-8 block" data-icon="brush">brush</span>
-<h3 class="service-card__title text-xl font-bold text-white mb-4">Theme Customization</h3>
-<p class="service-card__copy text-zinc-400 text-body-lg mb-8">Already have a theme? I'll customize it to match your brand and improve design, functionality, and user experience.</p>
+<span class="service-card__icon material-symbols-outlined text-emerald-300 !text-5xl mb-8 block" data-icon="build">build</span>
+<h3 class="service-card__title text-xl font-bold text-white mb-4">Troubleshooting & Bug Fixing</h3>
+<p class="service-card__copy text-zinc-400 text-body-lg mb-8">Plugin conflicts, PHP errors, broken functionality, failed updates, production issues and difficult WordPress problems.</p>
 <a class="service-card__link" href="<?php echo esc_url( home_url( '/theme-customization/' ) ); ?>">Learn More <span class="service-card__link-arrow"><span class="material-symbols-outlined !text-lg" data-icon="arrow_forward">arrow_forward</span></span></a>
 </div>
 <div class="service-card group p-8 rounded-xl">
 <span class="service-card__icon material-symbols-outlined text-amber-300 !text-5xl mb-8 block" data-icon="shopping_cart">shopping_cart</span>
 <h3 class="service-card__title text-xl font-bold text-white mb-4">WooCommerce Development</h3>
-<p class="service-card__copy text-zinc-400 text-body-lg mb-8">Launch a powerful online store with secure payments, optimized product pages, and a seamless shopping experience using WooCommerce.</p>
+<p class="service-card__copy text-zinc-400 text-body-lg mb-8">Store customization, checkout functionality, payment/shipping integrations and existing WooCommerce enhancements.</p>
 <a class="service-card__link" href="<?php echo esc_url( home_url( '/woocommerce-development/' ) ); ?>">Learn More <span class="service-card__link-arrow"><span class="material-symbols-outlined !text-lg" data-icon="arrow_forward">arrow_forward</span></span></a>
 </div>
 <div class="service-card group p-8 rounded-xl">
 <span class="service-card__icon material-symbols-outlined text-red-300 !text-5xl mb-8 block" data-icon="shield">shield</span>
-<h3 class="service-card__title text-xl font-bold text-white mb-4">Maintenance &amp; Support</h3>
+<h3 class="service-card__title text-xl font-bold text-white mb-4">Maintenance &amp; Performance</h3>
 <p class="service-card__copy text-zinc-400 text-body-lg mb-8">Keep your website secure, updated, and running smoothly with ongoing WordPress maintenance and support.</p>
 <a class="service-card__link" href="<?php echo esc_url( home_url( '/maintenance-support/' ) ); ?>">Learn More <span class="service-card__link-arrow"><span class="material-symbols-outlined !text-lg" data-icon="arrow_forward">arrow_forward</span></span></a>
 </div>
@@ -193,8 +191,8 @@ get_header();
 <section class="py-24 px-12 max-w-[1440px] mx-auto" id="portfolio">
 <div class="flex flex-col md:flex-row justify-between items-end mb-16 gap-8">
 <div class="max-w-2xl">
-<span class="text-label-md text-primary uppercase mb-4 block">Selected Work</span>
-<h2 class="text-5xl font-black text-on-surface">Architectural Excellence in Every Pixel.</h2>
+<!-- <span class="text-label-md text-primary uppercase mb-4 block">Selected Work</span> -->
+<h2 class="text-5xl font-black text-on-surface">Selected WordPress Work</h2>
 </div>
 <a class="group flex items-center gap-2 text-label-md text-on-surface font-bold" href="<?php echo esc_url( home_url( '/portfolio/' ) ); ?>">
                 View All Projects
@@ -315,10 +313,10 @@ get_header();
 </section>
 <!-- Final CTA -->
 <section class="final-cta bg-surface" id="contact">
-<div class="max-w-4xl mx-auto px-6 md:px-12 text-center">
+<div class="max-w-6xl mx-auto px-6 md:px-12 text-center">
 <span class="text-label-md text-primary uppercase mb-5 block">Start a Project</span>
-<h2 class="text-display-lg text-on-surface mb-8">Ready to build something remarkable?</h2>
-<p class="text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Let&apos;s create a WordPress experience that looks refined, performs fast, and gives your business room to grow.</p>
+<h2 class="text-display-lg text-on-surface mb-8">Need an Extra Pair of Experienced WordPress Hands?</h2>
+<p class="text-body-lg text-on-surface-variant mb-12 max-w-2xl mx-auto">Whether you have an upcoming build, an overloaded development team, a difficult WordPress issue, or ongoing client work that needs reliable support, let's talk.</p>
 <div class="flex flex-col sm:flex-row gap-4 justify-center">
 <a class="quote-popup-trigger primary-gradient text-on-primary px-10 py-4 rounded-lg font-bold text-lg hover:scale-105 hover:shadow-2xl transition-all inline-flex items-center justify-center gap-2" href="#quote"><span class="material-symbols-outlined" data-icon="request_quote">request_quote</span><span>Get a Quote</span></a>
 <a class="border-2 border-primary/40 text-primary px-10 py-4 rounded-lg font-bold text-lg hover:bg-primary-fixed transition-all inline-flex items-center justify-center gap-2" href="tel:+919893174406"><span class="material-symbols-outlined" data-icon="call">call</span><span>Call Now</span></a>
