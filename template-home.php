@@ -19,12 +19,29 @@ get_header();
 <span class="text-primary">WordPress Solutions</span> <br/>
                     Built to Scale.
                 </h1>
-<p class="text-body-lg text-on-surface-variant max-w-xl mb-12">
-                    12+ years of engineering custom WordPress ecosystems that prioritize speed, security, and editorial flexibility. I bridge the gap between complex code and intuitive user experiences.
+<p class="text-body-lg text-on-surface-variant max-w-xl mb-4">
+                    I help digital agencies deliver WordPress projects, solve complex technical problems, and handle ongoing client work without expanding their full-time development team.
                 </p>
+
+<div class="flex flex-wrap items-center gap-2 text-xs font-medium text-slate-600 mb-6">
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-50 px-3 py-1.5 ring-1 ring-slate-200">
+    <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+    13+ Years Experience
+  </span>
+
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-50 px-3 py-1.5 ring-1 ring-slate-200">
+    <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+    White-Label Friendly
+  </span>
+
+  <span class="inline-flex items-center gap-1.5 rounded-full bg-slate-50 px-3 py-1.5 ring-1 ring-slate-200">
+    <span class="h-1.5 w-1.5 rounded-full bg-emerald-500"></span>
+    Project &amp; Ongoing Support
+  </span>
+</div>
 <div class="flex flex-wrap gap-6">
 <a class="bg-gradient-to-br from-primary to-primary-container text-on-primary px-8 py-4 rounded-lg font-bold hover:scale-102 transition-all flex items-center gap-2" href="#contact">
-                        Start Your Project
+                        Discuss a Project
                         <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
 </a>
 <a class="border border-primary/40 text-primary px-8 py-4 rounded-lg font-bold hover:bg-primary-fixed/30 transition-all" href="<?php echo esc_url( home_url( '/portfolio/' ) ); ?>">
