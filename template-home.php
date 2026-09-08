@@ -86,7 +86,7 @@ get_header();
 </div>
 <div class="stats-card">
 <span class="stats-card__icon material-symbols-outlined" data-icon="workspace_premium">workspace_premium</span>
-<h3 class="stats-card__value"><span class="stat-counter" data-count="12" data-suffix="+">0</span></h3>
+<h3 class="stats-card__value"><span class="stat-counter" data-count="13" data-suffix="+">0</span></h3>
 <p class="stats-card__label">Years of Experience</p>
 </div>
 <div class="stats-card">
